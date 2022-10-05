@@ -6,7 +6,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <meta charSet='utf-8'/>
+        </Head>
         <body>
           <Main />
           <Script async src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalithics.id}`} strategy="afterInteractive"></Script>

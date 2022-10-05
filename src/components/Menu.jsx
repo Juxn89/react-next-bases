@@ -18,6 +18,6 @@ const Menu = () => {
 			</ul>
 		</div>
 	);
-}
+};
 
 export default Menu;

@@ -58,6 +58,6 @@ const Header = () => {
 			{state.orderIsOpen && <MyOrder />}
 		</>
 	);
-}
+};
 
 export default Header;

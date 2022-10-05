@@ -4,6 +4,7 @@ import AppContext from '@context/AppContext';
 import styles from '@styles/MyOrder.module.scss';
 import arrow from '@icons/flechita.svg';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const MyOrder = () => {
 	const { state, toggleOrder } = useContext(AppContext);
@@ -12,13 +13,13 @@ const MyOrder = () => {
 		const reducer = (accumalator, currentValue) => accumalator + currentValue.price;
 		const sum = state.cart.reduce(reducer, 0);
 		return sum;
-	}
+	};
 
 	return (
 		<aside className= { styles.MyOrder} >
 			<div className= { styles['MyOrder-container']} >
 				<div className= { styles['title-container']} >
-					<img className= { [styles['more-clickable-area'], 'pointer']} src={arrow} alt="arrow" onClick={() => toggleOrder()} />
+					<Image className= { [styles['more-clickable-area'], 'pointer']} src={arrow} alt="arrow" onClick={() => toggleOrder()} />
 					<p className= { styles.title} >My order</p>
 				</div>
 				<div className= { styles['my-order-content']} >
@@ -40,6 +41,6 @@ const MyOrder = () => {
 			</div>
 		</aside>
 	);
-}
+};
 
 export default MyOrder;

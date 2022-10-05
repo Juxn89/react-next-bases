@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import AppContext from '@context/AppContext';
 import styles from '@styles/OrderItem.module.scss';
-import close from '@icons/icon_close.png'
+import close from '@icons/icon_close.png';
 import Image from 'next/image';
 
 const OrderItem = ({ product }) => {
@@ -9,7 +9,7 @@ const OrderItem = ({ product }) => {
 
 	const handleRemove = product => {
 		removeFromCart(product);
-	}
+	};
 
 	return (
 		<div className={ styles.OrderItem }>
@@ -21,6 +21,6 @@ const OrderItem = ({ product }) => {
 			<Image className={['pointer', styles['more-clickable-area']]} src={close} alt="close" onClick={() => handleRemove(product)} />
 		</div>
 	);
-}
+};
 
 export default OrderItem;
