@@ -1,7 +1,7 @@
 const config = {
-    "googleAnalithics": {
-        "id": "G-XXXXXXXXXX"
-    }
-}
+  googleAnalithics: {
+    id: 'G-XXXXXXXXXX',
+  },
+};
 
 export default config;
